@@ -1,0 +1,61 @@
+	<div id="friendModal" class="modal fade" role="dialog">
+		<div class="modal-dialog" style="top:6em;">
+		<div class="panel panel-info" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{ '{{friendData[0].result}}' }} {{ '{{friendData[1].result}}' }}</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3 col-lg-3 " align="center">
+						<img alt="User Pic" src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class="img-circle img-responsive">
+					</div>
+					<div class=" col-md-9 col-lg-9 "> 
+						<table class="table table-user-information">
+							<tbody>
+								<tr>
+									<td>Most Wanted:</td>
+									<td ng-bind="friendData[3].result"></td>
+									</td>
+								</tr>
+								<tr>
+									<td>Join Date:</td>
+									<td ng-bind="friendData[4].result"></td>
+								</tr>
+								<tr>
+									<td>Date of Birth:</td>
+									<td ng-bind="friendData[5].result"></td>
+									</td>
+								</tr>
+									<td>Gender:</td>
+									<td ng-bind="friendData[6].result"></td>
+									</td>
+								</tr>
+								<tr>
+									<td>Home Address:</td>
+									<td ng-bind="friendData[7].result"></td>
+									</td>
+								</tr>
+								<tr>
+									<td>Email:</td>
+									<td><a href="{{ '{{friendData[2].result}}' }}" ng-bind="friendData[2].result"></a></td>
+								</tr>
+								<tr>
+									<td>Phone Number:</td>
+									<td ng-bind="friendData[8].result"></td>
+								</tr>
+								<tr>
+									<td>Wants:</td>
+									<td ng-bind="friendData[9].result"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<a ng-if="!friendData[9].result" ng-click="sub(friendData[2].result); search();" data-original-title="subscribe" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="fa fa-user-plus"></i></a>
+				<a ng-if="friendData[9].result" ng-click="unsub(friendData[2].result); search();" data-original-title="subscribed" data-toggle="tooltip" type="button" class="btn btn-sm btn-success"><i class="fa fa-check"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,72 @@
+<div class="collapse navbar-collapse" id="mainNavBar" ng-controller="ChatController">
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog" style="top:6em;">
+		<div class="panel panel-info" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{user[1]}} {{user[2]}}</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3 col-lg-3 " align="center">
+						<img alt="User Pic" src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class="img-circle img-responsive">
+					</div>
+					<div class=" col-md-9 col-lg-9 "> 
+							<form ng-submit="update()">
+								<table class="table table-user-information">
+									<tbody>
+										<tr>
+											<td>Most Wanted:</td>
+											<td class="outputs" ng-bind="userData[0].result"></td>
+											<td class="inputs" style="display: none;">
+												<input class="form-control" type="text" name="" placeholder="{{ '{{userData[0].result}}' }}" ng-model="most"/>
+											</td>
+										</tr>
+										<tr>
+											<td>Join Date:</td>
+											<td ng-bind="userData[1].result"></td>
+										</tr>
+										<tr>
+											<td>Date of Birth:</td>
+											<td class="outputs" ng-bind="userData[2].result"></td>
+											<td class="inputs" style="display: none;">
+												<input class="form-control" type="text" name="" placeholder="{{ '{{userData[2].result}}' }}" ng-model="birth"/>
+											</td>
+										</tr>
+											<td>Gender:</td>
+											<td class="outputs" ng-bind="userData[3].result"></td>
+											<td class="inputs" style="display: none;">
+												<input class="form-control" type="text" name="" placeholder="{{ '{{userData[3].result}}' }}" ng-model="gender"/>
+											</td>
+										</tr>
+										<tr>
+											<td>Home Address:</td>
+											<td class="outputs" ng-bind="userData[4].result"></td>
+											<td class="inputs" style="display: none;">
+												<input class="form-control" type="text" name="" placeholder="{{ '{{userData[4].result}}' }}"  ng-model="home"/>
+											</td>
+										</tr>
+										<tr>
+											<td>Email:</td>
+											<td><a href="{{user[0]}}">{{user[0]}}</a></td>
+										</tr>
+										<tr>
+											<td>Phone Number:</td>
+											<td class="outputs" ng-bind="userData[5].result"></td>
+											<td class="inputs" style="display: none;">
+												<input class="form-control" type="text" name="" placeholder="{{ '{{userData[5].result}}' }}" ng-model="number"/>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<input type="submit" id="sub" class="btn btn-primary inputs" name="Submit" style="display: none; float:right"/>
+							</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<a data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" id="push"><i class="fa fa-cog"></i></a> <!-- if own page -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

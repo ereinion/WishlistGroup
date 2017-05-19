@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse" style="border-radius:0; margin-bottom:0;">
+	<div class="navbar-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="/wishlist" class="navbar-brand">LISTER</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="mainNavBar">
+			<ul class="nav navbar-nav">
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li id="profilebutton">
+					<a data-toggle="modal" data-target="#myModal" class="navbar-brand">Profile</a>
+		        </li>
+		        <li id="searchbutton">
+					<a data-toggle="modal" data-target="#searchModal" class="navbar-brand">Search</a>
+		        </li>
+		        <!--<li {% if page == "list" %} class="active"{% endif %}>-->
+		        <!--	<a href="{{ url_for('showList') }}" target="_self" class="navbar-brand">Wishlist</a>-->
+		        <!--</li>-->
+		        <li>
+		        	<a class="navbar-brand" href="/subscriptions">Subscriptions</a>
+		        </li>
+		        <li>
+		        	<a class="navbar-brand" href="/logout">Log Out</a>
+		        </li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="alert alert-info" style="margin-bottom:0;">
+
+</div>

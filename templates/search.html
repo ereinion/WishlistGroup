@@ -1,0 +1,24 @@
+<div class="collapse navbar-collapse" id="mainNavBar" ng-controller="ChatController">
+	<div id="searchModal" class="modal fade" role="dialog">
+		<div class="modal-dialog" style="top:6em;">
+			<form>
+			    <input class="form-control" type="text" name="" placeholder="Search For User by Name or Email..." ng-change="search()" ng-model="searchFor"/>
+			</form>
+			<br>
+			<ul class="list-group" style="display: none;" id="resultList">
+				<div  ng-repeat="res in searchRes">
+					<li class="list-group-item" style="margin-bottom: 6px;">
+						<i ng-if="!res.subbed" ng-click="sub(res.email); search();" id="addUser" class="fa fa-user-plus"></i>
+						<i ng-if="res.subbed" ng-click="unsub(res.email); search();" id="subscribed" class="fa fa-check"></i>
+						<span>|</span>
+						<div id="searchName" ng-click="setFriendData(res.email)" style="display:inline;" data-toggle="modal" data-target="#friendModal" data-dismiss="modal">
+							<span ng-bind="res.name"></span>
+							<span ng-bind="res.email" style="float:right;"></span>
+						</div>
+					</li>
+				</div>
+			</ul>
+		</div>
+	</div>
+	{% include "friend.html" %}
+</div>

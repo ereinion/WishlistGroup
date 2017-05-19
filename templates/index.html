@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lister">
+  <head>
+    <!-- Provides metadata about the HTML document -->
+    <meta charset="UTF-8" />
+    <!-- Define a description of the web page -->
+    <meta name="description" content="LISTER" />
+    <!-- Define keywords for search engines -->
+    <meta name="keywords" content="'wish', 'list'" />
+    <!-- Define the author of the page -->
+    <meta name="author" content="co-authored by Hunter Renard, Roy O'Dell, and Colton Hall" />
+    <!-- Specify width of the page for a browser to render -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Specifies the character encoding for the document -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- Specifies the language for the document -->
+    <meta http-equiv="Content-Language" content="en">
+    <!-- Specifies the preferred style sheet to use -->
+    <meta http-equiv="default-style" content="../StyleSheets/style.css" />
+
+    <!-- favicon goes here -->
+
+    <!-- Defines the title of the document -->
+    <title>LISTER</title>
+
+    <!--  Specifies the base URL/target for all relative URLs in a document -->
+    <base href="." target="_self" />
+
+    <!-- Library style sheets -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/bootstrap-theme.min.css" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+    <!-- external normal style sheets -->
+    <!--[if !IE]><!-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.4/socket.io.js"></script>
+    <script src="Javascript/controller.js"></script>
+    <!--<![endif]-->
+  </head>
+
+	<body id="home">
+		<!-- header -->
+		{% include "login_header.html" %}
+
+		<!-- Jumbo -->
+		<div class="jumbotron">
+            <div class="container">
+                <h1>LISTER</h1>
+   	            <p class="col-lg-6"> LISTER is an easy to use web-based application that will help you collect, organize and keep track of the things you want. It also makes it easy to share those things with friends and family. What’s on your wishlist?</p>
+	       </div>
+    	</div>
+    
+    		<div class="container">
+             <!-- Example row of columns -->
+             <div class="row">
+                <div class="col-md-4">
+                   <h2><span class="fa fa-pencil-square-o"></span> Compile</h2>
+                   <p>
+                       Found the perfect sweater? Want to buy a new pair of kicks? How about the latest Drake album? With LISTER you can consolidate all of your favorite items from across the web into an easy, simple, and clean respository. 
+                   </p>
+               </div>
+    
+               <div class="col-md-4">
+                 <h2><span class="fa fa-sort-amount-asc"></span> Organize</h2>
+                 <p>
+                     LISTER lets you organize your wishlist items in to templates suiting your needs. LISTER features easy editing or removal of items in your wishlist. Cutomization ranges from attaching images to each item to rearranging by price, quantity, or priority.
+                 </p>
+               </div>
+    
+               <div class="col-md-4">
+                 <h2><span class="fa fa-share"></span> Share</h2>
+                 <p>
+                     It couldn't be easier to share your wishlist. Your friends and family can follow your list with a single click.
+                 </p>
+                 </div>
+             </div>
+             
+             <hr />
+             
+             <!-- footer goes here -->
+    
+    	<!-- Library Scripts -->
+        <!-- jQuery ***MUST GO BEFORE BOOTSTRAP SCRIPT!!!*** -->
+        <script src="../jQuery/jquery.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+        <!-- External normal Scripts -->
+        <script src="../Javascript/script.js" type="text/javascript"></script>
+    </body>
+</html>
